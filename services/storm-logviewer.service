@@ -10,7 +10,7 @@ EnvironmentFile=/etc/default/storm-logviewer
 User=storm
 Group=storm
 WorkingDirectory=/usr/lib/storm
-ExecStart=/bin/sh -c '/usr/bin/java -cp "${CLASSPATH}" -Xms${STORM_LOGVIEWER_JVM_MEMORY} -Xmx${STORM_LOGVIEWER_JVM_MEMORY} -Djava.library.path="${JAVA_LIBRARY_PATH}" -Dstorm.options="${STORM_OPTIONS}" -Dstorm.home=${STORM_HOME} ${STORM_LOGVIEWER_JVM_OPTS} backtype.storm.daemon.logviewer'
+ExecStart=/bin/sh -c 'exec /usr/bin/java -cp "${CLASSPATH}" -Xms${STORM_LOGVIEWER_JVM_MEMORY} -Xmx${STORM_LOGVIEWER_JVM_MEMORY} -Djava.library.path="${JAVA_LIBRARY_PATH}" -Dstorm.options="${STORM_OPTIONS}" -Dstorm.home=${STORM_HOME} ${STORM_LOGVIEWER_JVM_OPTS} backtype.storm.daemon.logviewer'
 Restart=always
 StandardOutput=null
 StandardError=journal

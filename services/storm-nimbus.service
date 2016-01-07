@@ -10,7 +10,7 @@ Environment=CLASSPATH=/usr/lib/storm/lib/asm-4.0.jar:/usr/lib/storm/lib/clojure-
 User=storm                                                                                                             
 Group=storm
 WorkingDirectory=/usr/lib/storm
-ExecStart=/bin/sh -c '/usr/bin/java -cp "${CLASSPATH}" -Xms${STORM_NIMBUS_JVM_MEMORY} -Xmx${STORM_NIMBUS_JVM_MEMORY} -Djava.library.path="${JAVA_LIBRARY_PATH}" -Dstorm.options="${STORM_OPTIONS}" -Dstorm.home=${STORM_HOME} ${STORM_NIMBUS_JVM_OPTS} backtype.storm.daemon.nimbus'                                                                                              
+ExecStart=/bin/sh -c 'exec /usr/bin/java -cp "${CLASSPATH}" -Xms${STORM_NIMBUS_JVM_MEMORY} -Xmx${STORM_NIMBUS_JVM_MEMORY} -Djava.library.path="${JAVA_LIBRARY_PATH}" -Dstorm.options="${STORM_OPTIONS}" -Dstorm.home=${STORM_HOME} ${STORM_NIMBUS_JVM_OPTS} backtype.storm.daemon.nimbus'
 Restart=always
 StandardOutput=null
 StandardError=journal

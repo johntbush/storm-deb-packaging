@@ -9,7 +9,7 @@ be used with any programming language, is used by many companies, and is a lot o
 url="http://storm.apache.org/"
 arch="all"
 section="misc"
-package_version="~6"
+package_version="~7"
 src_package="apache-storm-${version}.zip"
 download_url="http://mirror.symnds.com/software/Apache/storm/apache-storm-0.10.0/apache-storm-0.10.0.zip"
 origdir="$(pwd)"
